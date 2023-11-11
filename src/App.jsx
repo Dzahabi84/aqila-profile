@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import Home from "./pages/Home";
 import RootLayout from "./layout/RootLayout";
 
 const router = createBrowserRouter(
@@ -17,7 +18,10 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <div className="font-['IBM_Plex_Sans']">
+      <RouterProvider router={router}/>
+    </div>
+      
   )
 }
 
