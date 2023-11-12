@@ -4,8 +4,17 @@ import project from "../assets/project.svg";
 import home from "../assets/home.svg";
 import contact from "../assets/contact.svg";
 import { Switch } from "@material-tailwind/react";
+import { useTheme } from "../context/Theme";
 
 function Navbar() {
+  const {theme, SetDarkTheme, SetLightTheme} = useTheme()
+  function handleThemeSwitch () {;
+    if (theme == "light") {
+      SetDarkTheme()
+    } else {
+      SetLightTheme()
+    }
+  }
   return (
     <div className="z-50 w-[100%] bottom-9 fixed">
       <div className="w-[80%] lg:w-[900px] m-auto">
@@ -56,7 +65,7 @@ function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <Switch color="amber" />
+          <Switch onChange={handleThemeSwitch} color="indigo" defaultChecked/>
         </nav>
       </div>
     </div>
