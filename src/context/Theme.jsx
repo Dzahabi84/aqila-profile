@@ -9,9 +9,15 @@ export const useTheme = () => {
 export const ThemeProviderContext = ({ children }) => {
   const [theme, setTheme] = useState('dark')
 
-  const SetDarkTheme = () => setTheme('dark')
+  const SetDarkTheme = () => {
+    setTheme('dark')
+    document.body.style.backgroundColor = "black"
+  }
 
-  const SetLightTheme = () => setTheme('light')
+  const SetLightTheme = () => {
+    setTheme('light')
+    document.body.style.backgroundColor = "white"
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, SetDarkTheme, SetLightTheme }}>

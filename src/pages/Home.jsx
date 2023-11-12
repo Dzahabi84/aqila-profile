@@ -13,6 +13,9 @@ function Home() {
       return axios.get(
         "https://my-json-server.typicode.com/Dzahabi84/aqila-profile-db/landing-page"
       );
+    },
+    {
+      cacheTime: 300000
     }
   );
 
@@ -37,10 +40,10 @@ function Home() {
 
   return (
     <div
-      className={`bg-white h-screen dark:text-white dark:bg-black  sm:pt-0 pt-16`}
+      className={`bg-white h-screen dark:text-white dark:bg-black sm:pt-0 pt-14`}
     >
       <div
-        className={`transition-all ease-in-out duration-[50ms] m-auto h-[90vh] items-center flex-col md:flex-row flex justify-around w-[80%] xl:w-[1000px] ${
+        className={`transition-all ease-in-out duration-[50ms] m-auto md:h-[90vh] items-center flex-col md:flex-row flex justify-around w-[80%] xl:w-[1000px] ${
           !isLoading ? "opacity-100" : "opacity-0"
         }`}
       >

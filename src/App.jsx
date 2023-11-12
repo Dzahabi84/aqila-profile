@@ -27,7 +27,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className={`${theme} font-['IBM_Plex_Sans']`}>
-        <RouterProvider router={router} />
+        <div className="dark:bg-black bg-white">
+          <RouterProvider router={router} />
+        </div>
       </div>
     </QueryClientProvider>
   );
