@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
-import ThemeProviderContext from "./context/Theme.jsx";
+import GlobalProviderContext from "./context/Global.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <ThemeProviderContext>
+      <GlobalProviderContext>
         <App />
-      </ThemeProviderContext>
+      </GlobalProviderContext>
     </ThemeProvider>
   </React.StrictMode>
 );

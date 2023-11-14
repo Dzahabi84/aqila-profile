@@ -4,23 +4,12 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { useGlobal } from "../context/Global";
+import { Spinner } from "@material-tailwind/react";
 
 function Home() {
   const author = useRef();
-  const { isLoading, data, isError, error, isFetching } = useQuery(
-    "landing-page",
-    () => {
-      return axios.get(
-        "https://my-json-server.typicode.com/Dzahabi84/aqila-profile-db/landing-page"
-      );
-    },
-    {
-      cacheTime: 300000
-    }
-  );
-
-  console.log({ isFetching: isFetching, isLoading: isFetching });
-
+  const { SetRunFalse } = useGlobal()
   useEffect(() => {
     const typed = new Typed(author.current, {
       strings: ["AQILA RIZA DZAHABI"],
@@ -33,9 +22,20 @@ function Home() {
       typed.destroy();
     };
   }, []);
+  const { isLoading, data, isError, error, isFetching } = useQuery(
+    "landing-page",
+    () => {
+      return axios.get(
+        "https://my-json-server.typicode.com/Dzahabi84/aqila-profile-db/landing-page"
+      );
+    },
+    {
+      cacheTime: 300000
+    }
+  );
 
   if (isError) {
-    return <div>{error.message}</div>;
+    throw new Error()
   }
 
   return (

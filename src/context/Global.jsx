@@ -1,12 +1,12 @@
 import { createContext, useContext, useState } from 'react';
 
-export const ThemeContext = createContext()
+export const GlobalContext = createContext()
 
-export const useTheme = () => {
-  return useContext(ThemeContext)
+export const useGlobal = () => {
+  return useContext(GlobalContext)
 }
 
-export const ThemeProviderContext = ({ children }) => {
+export const GlobalProviderContext = ({ children }) => {
   const [theme, setTheme] = useState('dark')
 
   const SetDarkTheme = () => {
@@ -19,11 +19,13 @@ export const ThemeProviderContext = ({ children }) => {
     document.body.style.backgroundColor = "white"
   }
 
+
+
   return (
-    <ThemeContext.Provider value={{ theme, SetDarkTheme, SetLightTheme }}>
+    <GlobalContext.Provider value={{ theme, SetDarkTheme, SetLightTheme }}>
       {children}
-    </ThemeContext.Provider>
+    </GlobalContext.Provider>
   )
 }
 
-export default ThemeProviderContext
+export default GlobalProviderContext

@@ -16,8 +16,6 @@ function Skill() {
     }
   );
 
-  console.log(data);
-
   if (isLoading) {
     return (
       <div className="flex h-[85vh] w-full items-center justify-center">
@@ -27,18 +25,14 @@ function Skill() {
   }
 
   if (isError) {
-    return (
-      <div className="flex items-center w-full h-[85vh] justify-center text-3xl font-bold">
-        <h1 className="dark:text-white text-black">SOMETHING HAPPENED</h1>
-      </div>
-    );
+    throw new Error()
   }
   if (data) {
     return (
-    <div className="w-[90%] lg:w-[1000px] m-auto">
+    <div className="transition-all fade-in duration-[100ms] w-[90%] lg:w-[1000px] m-auto">
           <div className=" mt-5 mb-32 flex flex-row justify-center flex-wrap">
         {data?.data?.map((item) => (
-            <div className="p-2">
+            <div key={item.id} className="p-2">
               <CardSkill img={item.poster} title={item.title} />  
             </div>
         ))}

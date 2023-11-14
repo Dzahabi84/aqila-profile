@@ -16,6 +16,7 @@ export default function CardProject({
       <Carousel className="md:ml-6 bg-black w-fit md:w-[40%] rounded-xl  h-[260px]">
         {poster.map(item => (
                     <img
+                    key={item.indexOf()}
                     className="h-full w-full object-cover"
                     src={item}
                     alt=""

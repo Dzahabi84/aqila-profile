@@ -4,10 +4,10 @@ import project from "../assets/project.svg";
 import home from "../assets/home.svg";
 import skill from "../assets/skill.svg";
 import { Switch } from "@material-tailwind/react";
-import { useTheme } from "../context/Theme";
+import { useGlobal } from "../context/Global";
 
 function Navbar() {
-  const {theme, SetDarkTheme, SetLightTheme} = useTheme()
+  const {theme, SetDarkTheme, SetLightTheme} = useGlobal()
   function handleThemeSwitch () {;
     if (theme == "light") {
       SetDarkTheme()
