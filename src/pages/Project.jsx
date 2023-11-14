@@ -33,7 +33,7 @@ function Project() {
       }
 
     return (
-        <div className="transition-all ease-in-out duration-[50ms] pt-12 mb-12">
+        <div className="transition-all ease-in-out duration-[50ms] pt-5 mb-12">
             <main className=" pb-[120px]">
               {data?.data.map(item => (
                 <CardProject 

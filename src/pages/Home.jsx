@@ -66,7 +66,7 @@ function Home() {
         </aside>
         <div className="group relative sm:pt-0 sm:pb-0 pt-14 pb-40">
           <img
-            className="md:group-hover:top-[-5px] duration-300 z-20 w-44 md:w-52 absolute h-[260px] md:h-[308px]"
+            className="md:group-hover:top-[-5px] duration-300 z-20 w-44 md:w-52 absolute h-[245px] md:h-[308px]"
             src={hero}
             alt="Aqila Riza Dzahabi picture"
           />

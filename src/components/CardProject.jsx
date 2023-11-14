@@ -12,7 +12,7 @@ export default function CardProject({
   githubLink,
 }) {
   return (
-    <div className="w-[80%] rounded-2xl m-auto flex flex-col md:flex-row justify-between items-center md:h-[300px] xl:w-[1000px] bg-gray-300 dark:bg-gray-900">
+    <div className="w-[80%] rounded-2xl m-auto flex flex-col md:flex-row justify-between items-center md:h-[300px] xl:w-[1000px] bg-gray-200 dark:bg-gray-900">
       <Carousel className="md:ml-6 bg-black w-fit md:w-[40%] rounded-xl  h-[260px]">
         {poster.map(item => (
                     <img

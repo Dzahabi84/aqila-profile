@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import about from "../assets/about.svg";
 import project from "../assets/project.svg";
 import home from "../assets/home.svg";
-import contact from "../assets/contact.svg";
+import skill from "../assets/skill.svg";
 import { Switch } from "@material-tailwind/react";
 import { useTheme } from "../context/Theme";
 
@@ -34,7 +34,7 @@ function Navbar() {
             <li className="p-1">
               <NavLink
                 to="project"
-                className="flex items-center p-2 rounded-full  duration-100 active:bg-[rgba(0,0,0,0.16)] hover:bg-[rgba(0,0,0,0.04)]"
+                className="flex items-center p-2 rounded-full  duration-100 active:bg-[rgba(0,0,0,0.16)] hover:bg-[rgba(0,0,0,0.16)]"
               >
                 <span>
                   <img className="w-9" src={project} alt="Project" />
@@ -44,19 +44,19 @@ function Navbar() {
             </li>
             <li className="p-1">
               <NavLink
-                to="contact"
-                className="flex items-center active:bg-[rgba(0,0,0,0.16)] p-2 rounded-full duration-100 hover:bg-[rgba(0,0,0,0.04)]"
+                to="skill"
+                className="flex items-center active:bg-[rgba(0,0,0,0.16)] p-2 rounded-full duration-100 hover:bg-[rgba(0,0,0,0.16)]"
               >
                 <span>
-                  <img className="w-9" src={contact} alt="Contact" />
+                  <img className="w-9" src={skill} alt="Skill" />
                 </span>
-                <p className="hidden md:block mx-3">Contact</p>
+                <p className="hidden md:block mx-3">Skill</p>
               </NavLink>
             </li>
             <li className="p-1">
               <NavLink
                 to="about"
-                className="flex items-center active:bg-[rgba(0,0,0,0.16)] p-2 rounded-full duration-100 hover:bg-[rgba(0,0,0,0.04)]"
+                className="flex items-center active:bg-[rgba(0,0,0,0.16)] p-2 rounded-full duration-100 hover:bg-[rgba(0,0,0,0.16)]"
               >
                 <span>
                   <img className="w-9" src={about} alt="About" />
