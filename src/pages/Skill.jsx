@@ -2,8 +2,12 @@ import CardSkill from "../components/CardSkill";
 import { Spinner } from "@material-tailwind/react";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { useEffect } from "react";
 
 function Skill() {
+  useEffect(() => {
+    document.title = "Skill"
+  })
   const { isLoading, data, isError, error, isFetching } = useQuery(
     "skill",
     () => {

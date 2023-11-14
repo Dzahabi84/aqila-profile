@@ -5,6 +5,7 @@ import email from "../assets/email-about.svg";
 import { Spinner } from "@material-tailwind/react";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { useEffect } from "react";
 
 function About() {
   const { isLoading, data, isError, error, isFetching } = useQuery(
@@ -18,6 +19,10 @@ function About() {
       cacheTime: 300000,
     }
   );
+
+  useEffect(() => {
+    document.title = "About"
+  }, [])
 
   if (isLoading) {
     return (

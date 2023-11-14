@@ -8,6 +8,9 @@ import { useGlobal } from "../context/Global";
 import { Spinner } from "@material-tailwind/react";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Aqilaa"
+  }, [])
   const author = useRef();
   const { SetRunFalse } = useGlobal()
   useEffect(() => {

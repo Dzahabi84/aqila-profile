@@ -2,8 +2,12 @@ import { Spinner } from "@material-tailwind/react";
 import CardProject from "../components/CardProject";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { useEffect } from "react";
 
 function Project() {
+  useEffect(() => {
+    document.title = "Project"
+  }, [])
   const { isLoading, data, isError, error, isFetching } = useQuery(
     "project",
     () => {
