@@ -33,7 +33,7 @@ function Project() {
   }
 
   return (
-    <div className="transition-all ease-in-out duration-[50ms] pt-5 mb-5">
+    <div className="transition-all ease-in-out duration-[50ms] pt-5 pb-28 mb-5">
       <main className="pb-10">
         {data?.data.map((item) => (
           <CardProject
@@ -44,7 +44,6 @@ function Project() {
             year={item.year}
             techStack={item.techStack}
             directLink={item.directLink}
-            githubLink={item.github}
           />
         ))}
       </main>

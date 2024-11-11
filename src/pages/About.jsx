@@ -21,8 +21,8 @@ function About() {
   );
 
   useEffect(() => {
-    document.title = "About"
-  }, [])
+    document.title = "About";
+  }, []);
 
   if (isLoading) {
     return (
